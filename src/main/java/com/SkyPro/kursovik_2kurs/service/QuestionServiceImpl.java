@@ -47,7 +47,7 @@ public class QuestionServiceImpl implements QuestionService {
         if (questions.isEmpty()) {
             throw new StorageEmptyException();
         }
-        int index = RANDOM.nextInt(questions.size())
+        int index = RANDOM.nextInt(questions.size());
         return questions.stream()
                 .skip(index)
                 .findFirst()
